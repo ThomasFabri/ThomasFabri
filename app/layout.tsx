@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -10,6 +11,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const vcrOsd = localFont({
+  src: "../public/fonts/VCR_OSD_MONO_1.001.ttf",
+  variable: "--font-vcr",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -25,10 +32,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${vcrOsd.variable} antialiased`}
       >
         {children}
       </body>
     </html>
   );
 }
+
