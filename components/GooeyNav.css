@@ -46,7 +46,6 @@
   position: relative;
   z-index: 3;
   color: white;
-  text-shadow: 0 0 30px rgb(255 255 255 / 0.7);
 }
 
 .gooey-nav-container nav ul li {
@@ -84,7 +83,6 @@
 
 .gooey-nav-container nav ul li.active {
   color: black;
-  text-shadow: 0 0 30px rgb(255 255 255 / 0.7);
 }
 
 .gooey-nav-container nav ul li.active::after {

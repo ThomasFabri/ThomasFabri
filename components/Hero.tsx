@@ -9,10 +9,10 @@ export default function Hero() {
         <GradientBlinds
           gradientColors={["#233D4C"]}
           angle={200}
-          noise={0.0}
+          noise={0}
           blindCount={1}
           blindMinWidth={2}
-          mouseDampening={0.15}
+          mouseDampening={0.3}
           mirrorGradient={false}
           spotlightRadius={0.6}
           spotlightSoftness={1.0}
@@ -24,10 +24,13 @@ export default function Hero() {
         />
         <div>
           <div>
-            <p className="absolute md:top-115 top-35 left-10 text-6xl md:text-9xl font-vcr text-[#ffffff] text-shadow-xl">
+            <p className="absolute md:hidden top-35 left-10 text-6xl md:text-9xl font-vcr text-[#ffffff] ">
               Thomas <br /> Fabri
             </p>
-            <p className="absolute bottom-15 md:bottom-5 right-10 text-end text-2xl md:text-3xl font-semibold italic text-white text-shadow-xl">
+            <p className="absolute md:block hidden bottom-0 left-10 text-6xl md:text-9xl font-vcr text-[#ffffff] ">
+              Thomas <br /> Fabri
+            </p>
+            <p className="absolute bottom-15 md:bottom-8 right-10 text-end text-2xl md:text-3xl font-neue text-white">
               Fullstack Developer <br /> DevOps Enthusiast
             </p>
           </div>
