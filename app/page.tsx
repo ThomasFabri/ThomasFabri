@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import Projects from "../components/Projects";
 import About from "../components/About";
 import Loader from "../components/Loader";
+import Buildin from "@/components/Building";
 
 const MainContent = memo(function MainContent() {
   return (
@@ -27,6 +28,7 @@ const MainContent = memo(function MainContent() {
 
           <Projects />
           <About />
+          <Buildin/>
         </div>
       </section>
     </main>
