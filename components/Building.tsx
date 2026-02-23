@@ -22,7 +22,7 @@ export default function Buildin() {
   }, []);
 
   return (
-    <section className="min-h-200 bg-black/95 text-white pt-100 text-center justify-items-center">
+    <section className="min-h-200 bg-black/95 text-white pt-40 text-center justify-items-center">
       <h1>Buildin...</h1>
 
       <div ref={hammerRef} className="inline-block">

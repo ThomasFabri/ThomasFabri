@@ -4,9 +4,9 @@ import GooeyNav from "@/components/GooeyNav";
 
 export default function Header() {
 const items = [
+  { label: "CONTACT", href: "#about" },
   { label: "HOME", href: "#" },
-  { label: "CONTACT", href: "#" },
-  { label: "ABOUT", href: "#" },
+  { label: "PROJECTS", href: "#projects" },
 ];
 
   return (

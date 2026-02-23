@@ -7,17 +7,24 @@ export const Card = forwardRef(({ customClass, ...rest }, ref) => (
 ));
 Card.displayName = 'Card';
 
-const makeSlot = (i, distX, distY, total) => ({
-  x: i * distX,
-  y: -i * distY,
-  z: -i * distX * 1.5,
-  zIndex: total - i
-});
+const makeSlot = (i, distX, distY, total) => {
+  const depth = total > 1 ? i / (total - 1) : 0;
+  return {
+    x: i * distX,
+    y: -i * distY,
+    z: -i * distX * 1.5,
+    zIndex: total - i,
+    opacity: 1 - depth * 0.45,
+    scale: 1 - depth * 0.08
+  };
+};
 const placeNow = (el, slot, skew) =>
   gsap.set(el, {
     x: slot.x,
     y: slot.y,
     z: slot.z,
+    opacity: slot.opacity,
+    scale: slot.scale,
     xPercent: -50,
     yPercent: -50,
     skewY: skew,
@@ -72,6 +79,9 @@ const CardSwap = ({
 
   useEffect(() => {
     const total = refs.length;
+    if (!total) return;
+
+    order.current = Array.from({ length: total }, (_, i) => i);
     refs.forEach((r, i) => placeNow(r.current, makeSlot(i, cardDistance, verticalDistance, total), skewAmount));
 
     const swap = () => {
@@ -83,7 +93,7 @@ const CardSwap = ({
       tlRef.current = tl;
 
       tl.to(elFront, {
-        y: '+=500',
+        y: '+=200',
         duration: config.durDrop,
         ease: config.ease
       });
@@ -99,6 +109,8 @@ const CardSwap = ({
             x: slot.x,
             y: slot.y,
             z: slot.z,
+            opacity: slot.opacity,
+            scale: slot.scale,
             duration: config.durMove,
             ease: config.ease
           },
@@ -121,6 +133,8 @@ const CardSwap = ({
           x: backSlot.x,
           y: backSlot.y,
           z: backSlot.z,
+          opacity: backSlot.opacity,
+          scale: backSlot.scale,
           duration: config.durReturn,
           ease: config.ease
         },
@@ -150,10 +164,14 @@ const CardSwap = ({
       return () => {
         node.removeEventListener('mouseenter', pause);
         node.removeEventListener('mouseleave', resume);
+        tlRef.current?.kill();
         clearInterval(intervalRef.current);
       };
     }
-    return () => clearInterval(intervalRef.current);
+    return () => {
+      tlRef.current?.kill();
+      clearInterval(intervalRef.current);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cardDistance, verticalDistance, delay, pauseOnHover, skewAmount, easing]);
 
