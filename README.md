@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+👋 Hi, I'm Thomas
 
-## Getting Started
+I'm a Web Developer focused on Front-End development, with around 2 years of experience building modern, responsive, and user-centered websites.
 
-First, run the development server:
+I previously worked in Brazil developing solutions for small businesses, personal brands, and independent projects, always prioritizing clean code, performance, and well-structured interfaces.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+I’m currently based in Portugal (Braga area) and actively looking for opportunities as:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+💼 Junior Front-End Developer
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🤝 Freelance Web Developer
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🚀 Web projects for companies and entrepreneurs
 
-## Learn More
+💻 Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+JavaScript
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+React
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Next.js
 
-## Deploy on Vercel
+Git & GitHub
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Docker
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+.NET
+
+HTML5
+
+CSS3
+
+🚀 What You Can Expect From My Work
+
+Clean and maintainable code
+
+Responsive and modern interfaces
+
+Performance-focused development
+
+Attention to user experience
+
+Continuous learning and improvement
