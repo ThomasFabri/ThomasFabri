@@ -4,14 +4,6 @@ I'm a Web Developer focused on Front-End development, with around 2 years of exp
 
 I previously worked in Brazil developing solutions for small businesses, personal brands, and independent projects, always prioritizing clean code, performance, and well-structured interfaces.
 
-I’m currently based in Portugal (Braga area) and actively looking for opportunities as:
-
-💼 Junior Front-End Developer
-
-🤝 Freelance Web Developer
-
-🚀 Web projects for companies and entrepreneurs
-
 💻 Tech Stack
 
 JavaScript
